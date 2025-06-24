@@ -5,10 +5,8 @@ const options = {
 		'.next',
 		'.data',
 		'.git',
-		'workspaces/api/node_modules',
+		'apps/*/node_modules',
 		'*.data*',
-		'workspaces/api/.data-test/*',
-		'workspaces/bot/node_modules'
 	],
 	// 'watch_options': {
 	// 	'followSymlinks': false
@@ -23,14 +21,15 @@ module.exports = {
 			name: `app-${basePort}`,
 			script: 'bun',
 			env: { NODE_ENV: 'development' },
+			cwd: 'apps/frontend-nextjs',
 			args: 'run dev',
 			...options//
 		},
 		// {
-		// 	name: 'xcard.api',
+		// 	name: 'app',
 		// 	script: 'bun',
 		// 	args: 'dev',
-		// 	cwd: 'workspaces/api',
+		// 	cwd: 'apps/backend-elysia',
 		// 	env: { PORT: 3011 },
 		// 	...dev_options
 		// }
