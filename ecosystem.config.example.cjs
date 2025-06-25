@@ -8,9 +8,9 @@ const options = {
 		'apps/*/node_modules',
 		'*.data*',
 	],
-	// 'watch_options': {
-	// 	'followSymlinks': false
-	// }
+	'watch_options': {
+		'followSymlinks': false
+	}
 }
 
 const namespace = 'ttsp.dev.dev'
@@ -18,21 +18,13 @@ const namespace = 'ttsp.dev.dev'
 module.exports = {
 	apps: [
 		{
-			namespace,
-			name: 'landing',
+			namespace, // your namespace. will be visible in pm2 list. and can be used to filter apps.
+			name: 'frontend', // your app name. will be visible in pm2 list.
 			cwd: 'apps/frontend-nextjs',
 			env: { PORT: 3000, NODE_ENV: 'development' },
 			script: 'bun',
 			args: 'run dev',
 			...options
 		},
-		// {
-		// 	name: 'app',
-		// 	script: 'bun',
-		// 	args: 'dev',
-		// 	cwd: 'apps/backend-elysia',
-		// 	env: { PORT: 5071 },
-		// 	...dev_options
-		// }
 	]
 }
