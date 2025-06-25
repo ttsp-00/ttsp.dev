@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import TelegramButton from '@/components/TelegramButton'
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
 	return (
@@ -13,6 +14,7 @@ export const Hero = () => {
 		<div className="">
 			<div className="max-w-4xl">
 				<h1 className='text-5xl font-bold mb-8'>Тестируем сайты, приложения, ботов, игры более 10 лет.</h1>
+				<TelegramButton />
 			</div>
 		</div>
 	)
