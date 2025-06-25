@@ -1,0 +1,12 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"eslint.format.enable": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"javascript.suggest.jsdoc.generateReturns": false,
+	"typescript.suggest.completeJSDocs": false
+} 
